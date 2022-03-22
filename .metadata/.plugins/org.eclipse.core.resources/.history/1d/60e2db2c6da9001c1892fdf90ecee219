@@ -1,0 +1,26 @@
+package com.adan.winelist.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class MainController {
+
+	
+	@GetMapping("/wine-list")
+	public String wineList(Model viewModel) {
+		
+		
+		
+		
+		return "wine-list.jsp";
+	}
+	
+	@GetMapping("/showFormForAddReview")
+	public String addWineReview(Model viewModel) {
+		
+	
+		return "wine-review.jsp";
+	}
+}

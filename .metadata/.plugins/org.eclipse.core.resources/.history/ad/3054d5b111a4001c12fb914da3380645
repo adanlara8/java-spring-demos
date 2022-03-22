@@ -1,0 +1,5 @@
+package com.adan.thymeleafspringsecurity.controller;
+
+public class MainController {
+
+}

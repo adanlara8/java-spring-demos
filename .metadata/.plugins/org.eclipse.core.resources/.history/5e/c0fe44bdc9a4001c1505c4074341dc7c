@@ -1,0 +1,7 @@
+package com.adan.thymeleafspringsecurity.securityconfig;
+
+import org.springframework.security.config.annotation.web.WebSecurityConfigurerAdapter;
+
+public class WebSecurityConfig implements WebSecurityConfigurerAdapter {
+
+}

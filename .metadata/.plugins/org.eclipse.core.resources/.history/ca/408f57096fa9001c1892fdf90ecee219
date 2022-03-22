@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>    
+    
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Add Review</title>
+	</head>
+	<body>
+		<h1>Add A New Wine</h1>
+	<a href= "/wine-list">Wine List</a>
+	
+	<form:form method="post" action="/add-review" modelAttribute="newWine">
+		<form:input path="name" value="Name"/>
+		<form:input path="type" name="Type"/>
+		<form:input path="score" name="Score"/>
+		<form:input path="message" name="Notes"/>
+		<form:input path="picture" name="Add Picture"/>
+
+		<form:button>Submit</form:button>
+	</form:form>
+	</body>
+</html>

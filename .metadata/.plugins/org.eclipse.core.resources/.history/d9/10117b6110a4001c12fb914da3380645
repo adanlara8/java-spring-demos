@@ -1,0 +1,7 @@
+package com.adan.thymeleafspringsecurity.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepository2 extends JpaRepository<T, ID> {
+
+}

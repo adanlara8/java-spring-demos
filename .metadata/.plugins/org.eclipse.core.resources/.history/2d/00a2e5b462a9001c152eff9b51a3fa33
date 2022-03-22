@@ -1,0 +1,5 @@
+package com.adan.winelist.entity;
+
+public class Wine {
+
+}

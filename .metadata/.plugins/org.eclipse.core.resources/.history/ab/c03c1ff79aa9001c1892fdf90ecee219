@@ -1,0 +1,27 @@
+package com.adan.winelist.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.adan.winelist.entity.Wine;
+
+@Controller
+public class MainController {
+
+	
+	@GetMapping("/wine-list")
+	public String wineList(Model viewModel) {
+		
+		return "wine-list.jsp";
+	}
+	
+	@GetMapping("/review-form")
+	public String showWineReview(@ModelAttribute("newWine") Wine newWine, Model viewModel) {		
+	
+		viewModel.addAttribute("newWine", newWine);
+		
+		return "wine-review.jsp";
+	}
+}

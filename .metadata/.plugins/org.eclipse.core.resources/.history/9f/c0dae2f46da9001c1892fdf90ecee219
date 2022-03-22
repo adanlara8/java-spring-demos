@@ -1,0 +1,102 @@
+package com.adan.winelist.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="wines")
+public class Wine {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
+	private int id;
+	
+	@Column(name="name")
+	private String name;
+	
+	@Column(name="type")
+	private String type;
+	
+	@Column(name="score")
+	private float score;
+	
+	@Column(name="message")
+	private String message;
+	
+	@Column(name="picture")
+	private String picture;
+
+	public Wine( String name, String type, int score, String message, String picture) {
+
+		this.name = name;
+		this.type = type;
+		this.score = score;
+		this.message = message;
+		this.picture = picture;
+	}
+	
+	public Wine() {
+		
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+
+	@Override
+	public String toString() {
+		return "Wine [id=" + id + ", name=" + name + ", type=" + type + ", score=" + score + ", message=" + message
+				+ ", picture=" + picture + "]";
+	}
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.adan.thymeleafspringsecurity.service;
+
+public interface EmployeeService {
+
+}

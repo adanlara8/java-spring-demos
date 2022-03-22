@@ -1,0 +1,27 @@
+package com.adan.thymeleafspringsecurity.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.adan.thymeleafspringsecurity.entity.Employee;
+import com.adan.thymeleafspringsecurity.service.EmployeeServiceImpl;
+
+@Controller
+public class MainController {
+
+	@Autowired
+	private EmployeeServiceImpl employeeService;
+	
+	@GetMapping("/")
+	public String showEmployees(Model viewModel) {
+		
+		List<Employee> allEmployees = employeeService.findAll();
+		viewModel.addAttribute("employees", allEmployees);
+		
+		return "employee-list";
+	}
+}

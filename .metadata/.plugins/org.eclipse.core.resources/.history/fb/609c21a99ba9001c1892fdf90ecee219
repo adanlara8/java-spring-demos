@@ -1,0 +1,40 @@
+package com.adan.winelist.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.adan.winelist.dao.WineRepository;
+import com.adan.winelist.entity.WineReview;
+@Service
+public class WineReviewServiceImpl implements WineReviewService {
+
+	@Autowired
+	private WineRepository wineRepo;
+	
+	@Override
+	public List<WineReview> findAll() {
+		return (List<WineReview>) wineRepo.findAll();
+		
+	}
+
+	@Override
+	public List<WineReview> findWineReviewByName(String theWineName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveWineReview(WineReview theWine) {
+		wineRepo.save(theWine);
+
+	}
+
+	@Override
+	public void deleteWineReviewById(int wineId) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

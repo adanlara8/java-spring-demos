@@ -1,0 +1,7 @@
+package com.adan.thymeleafspringsecurity.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface EmployeeRepository extends CrudRepository<T, ID> {
+
+}

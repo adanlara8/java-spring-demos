@@ -1,0 +1,5 @@
+package com.adan.winelist.service;
+
+public interface WineService {
+
+}

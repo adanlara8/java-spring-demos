@@ -1,0 +1,5 @@
+package com.adan.thymeleafspringsecurity.securityconfig;
+
+public class DemoAppConfig {
+
+}

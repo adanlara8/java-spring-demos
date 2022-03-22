@@ -1,0 +1,5 @@
+package com.adan.thymeleafspringsecurity.entity;
+
+public class Employee {
+
+}

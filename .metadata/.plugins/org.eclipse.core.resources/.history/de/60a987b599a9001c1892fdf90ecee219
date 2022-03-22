@@ -1,0 +1,33 @@
+package com.adan.winelist.service;
+
+import java.util.List;
+
+import com.adan.winelist.entity.Wine;
+
+public class WineReviewServiceImpl implements WineService {
+
+	@Override
+	public List<Wine> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Wine> findWineReviewByName(String theWineName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveWineReview(Wine theWine) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteWineReviewById(int wineId) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

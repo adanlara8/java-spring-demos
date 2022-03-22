@@ -1,0 +1,9 @@
+package com.adan.winelist.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.adan.winelist.entity.Wine;
+
+public interface WineRepository extends JpaRepository<Wine, Integer> {
+
+}

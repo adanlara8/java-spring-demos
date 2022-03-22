@@ -1,0 +1,21 @@
+package com.adan.winelist.service;
+
+import java.util.List;
+
+import com.adan.winelist.entity.WineReview;
+
+public interface WineReviewService {
+
+	public List<WineReview> findAll();
+	
+	public List<WineReview> findWineReviewByName(String theWineName);
+	
+	//might delete later
+	//public List<Wine> findWineReviewByScore(String theWineScore);
+	
+	public void saveWineReview(WineReview theWine);
+	
+	public void deleteWineReviewById(int wineId);
+
+	
+}

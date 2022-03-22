@@ -1,0 +1,39 @@
+package com.adan.winelist.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.adan.winelist.entity.WineReview;
+import com.adan.winelist.service.WineReviewServiceImpl;
+
+@Controller
+public class MainController {
+
+	@Autowired
+	private WineReviewServiceImpl reviewServ;
+	
+	@GetMapping("/wine-list")
+	public String wineList(Model viewModel) {
+		
+		return "wine-list.jsp";
+	}
+	
+	@GetMapping("/review-form")
+	public String showWineReview(@ModelAttribute("newWine") WineReview newWine, Model viewModel) {		
+	
+		viewModel.addAttribute("newWine", newWine);
+		
+		return "wine-review.jsp";
+	}
+	
+	@PostMapping("/add-review")
+	public String addReview(@ModelAttribute("newWine") WineReview newWine, Model viewModel) {
+		
+		
+		return "redirect:/wine-list";
+	}
+}

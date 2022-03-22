@@ -1,0 +1,16 @@
+package com.adan.winelist.dao;
+
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.adan.winelist.entity.Wine;
+
+public interface WineRepository extends CrudRepository<Wine, Integer> {
+
+	public List<Wine> findAllByOrderScoreAsc();
+	
+	public List<Wine> findByNameContainsAllIgnoreCase(String theWineName);
+	
+}
