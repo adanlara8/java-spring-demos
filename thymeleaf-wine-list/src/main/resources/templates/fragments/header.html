@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	
+		<title th:text="#{wine-list.page.title}"> </title>	    
+    	<meta charset="utf-8">
+    
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    	<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	    
+	    <script type="text/script" src="/js/jquery.min.js"></script>
+	    <script type="text/script" src="/js/script.js"></script>
+	    <script type="text/script" src="/js/bootstrap.min.js"></script>
+	    
+    
+	</head>
+	
+	<body>
+		<div class="header" th:fragment="header">
+			<h1 class="title">Wine Directory</h1>
+			<hr>
+			<a class="button-link" onclick="myFunction()" th:href="@{/wine-list}">Back to list</a>					
+			<a class="button-link" th:href="@{/review-form}">Add Wine</a>
+			<form th:action="@{/search}" method= "GET">
+				<input type="text" name="wineName" th:value="${wineName}" placeholder="Find Wine">
+				<button type="submit" class="btn btn-info" >Search</button>
+			</form>
+		</div>
+	
+	</body>
+</html>

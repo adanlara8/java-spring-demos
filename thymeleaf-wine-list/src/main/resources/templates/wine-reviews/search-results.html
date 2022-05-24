@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="utf-8">
+		<title>Search Results</title>	   
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
+	    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+		    
+		<script type="text/script" th:src="@{/js/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/script.js}"></script>
+		<script type="text/script" th:src="@{/js/bootstrap.min.js}"></script>
+	</head>
+
+	<body>
+		<div class="container" >
+			<div class="header" th:replace="fragments/header :: header"></div>
+				
+			<div class= "wine-list">
+				<table>
+					<thead>
+						<tr class="table-head">
+							<th>Photo</th>
+							<th>Wine</th>
+						</tr>
+					</thead>
+					<tbody>			
+						<tr th:each="tempWine : ${searchResults}"class="table-row" th:id="${tempWine.id}" th:onclick="rowClicked(this.getAttribute('id'))">
+							<td class="col-md-3">
+								<img alt="Wine" th:src="@{${tempWine.PictureImagePath}}">
+							</td>
+							<td class="col-md-7"> 
+								<div class="row">
+									<div class="col-sm-6">
+										<p>Name: </p>
+										<p th:text= "${tempWine.name}"/> 
+									</div>
+									<div class="col-sm-4">
+										<p>Score: </p>
+										<p th:text="${tempWine.score}"/>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<p>Type: </p>
+										<p th:text="${tempWine.type}"/>
+									</div>
+									<div class="col-sm-4">
+										<p>Year: </p>
+										<p th:text="${tempWine.year}"/>
+									</div>
+								</div>			
+							</td>					
+						</tr>	
+					</tbody>	
+				</table>
+			</div>
+		</div>
+	</body>
+
+
+
+
+</html>
